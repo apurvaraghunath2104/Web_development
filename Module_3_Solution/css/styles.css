@@ -1,0 +1,229 @@
+.container{
+	margin:0;
+	padding: 0;
+}
+#header-nav {
+	background-color: #33FFA5;
+	border-radius: 0;
+	border: 0;
+}
+.navbar-brand{
+	padding-top: 25px;
+}
+.navbar-brand h1{
+	font-family: Arial, serif;
+	color: #C70039;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none;
+}
+
+#nav-list{
+	margin-top: 10px;
+}
+#nav-list a{
+	color: #C70039;
+	text-align: center;
+}
+#nav-list a:hover{
+	background: #F9EF05;
+}
+#nav-list a span{
+	font-size: 1.8em;
+}
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+	border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle{
+	clear:both;
+	margin-top: -30px;
+}
+/************End of header*************************/
+body {
+	font-size: 16px;
+	color: #03021B; 
+	font-family: Arial, sans-serif; 
+}
+
+.row {
+	margin: 20px;
+}
+.content-box{
+	margin:20px;
+	width: auto;
+	height: 700px;
+	background-color: #FAE6B3;
+	font-size: "Arial";
+	padding: 20px;
+	border: 1px solid black;
+
+}
+.item-name{
+	margin-bottom: 10px;
+	font-weight: bold;
+
+}
+
+p > a{
+	text-decoration: underline;
+
+}
+/******large devices only **********/
+@media (min-width: 1200px){
+	/* home page restaurant image*/
+	.container .jumbotron{
+		background : url('../images/jumbotron_1200.jpg') no-repeat;
+		height: 675px;
+	}
+
+}
+
+/******Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+/*adjusting header*/
+	#logo-img{	
+		background: url('../images/restaurant-logo_medium.png') no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 5px 5px 5px 0;
+	}
+	/* home page restaurant image*/
+	.container .jumbotron{
+		background : url('../images/jumbotron_992.jpg') no-repeat;
+		height: 558px;
+	}
+}
+ 
+
+/******Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px){
+	/* home page restaurant image*/
+	.container .jumbotron{
+		background : url('../images/jumbotron_768.jpg') no-repeat;
+		height: 432px;
+	}
+}
+/******Extra small devices only **********/
+@media (max-width: 767px){
+	/*adjusting header for small devices*/
+		.navbar-brand{
+			padding-top: 10px;
+			height: 80px;
+		}
+		/*resizing restaurant name*/
+		.navbar-brand h1{
+			padding-top: 10px;
+			font-size: 5vw; /*responsive so ise vw*/
+		}
+		/*resizing kosher certificate size*/
+		.navbar-brand p{
+			margin-top: 12px;
+			font-size: .6em;
+		}
+		/*resizing the star image*/
+		.navbar-brand p img{
+			height: 20px;
+			}	
+			/*override the jumbotorn in index.html*/
+		/*provide specificity style*/
+		.container .jumbotron{
+			margin-top: 30px;
+			padding: 0;
+			
+		}
+		/* styling for the phone icon and div for extra small devices*/
+		#call-btn > a{
+			font-size: 1.5em;
+			display: block;
+			margin: 0 20px;
+			padding: 10px;
+			border: 2px solid #fff;
+			background-color: #f6b319;
+			color: #951c49;
+		}
+		#xs-deliver{
+			margin-top: 5px;
+			font-size: .7em;
+			text-transform: uppercase;
+			letter-spacing: .1em;
+}
+		/*the tile images are positioned worngly for very small images
+so provide a margin of auto for left and right to postion them in the center*/
+		#menu-tile, #specials-tile {
+		width: 360px;
+		margin: 0 auto 15px;
+		}
+
+		/*footer for extra small devices*/
+		.panel-footer section {
+			margin-bottom: 30px;
+			text-align: center;
+		} 
+
+		.panel-footer section:nth-child(3) {
+					/*we already have a margin on the whole row*/
+					margin-bottom: 0px;
+		}
+		.panel-footer section hr {
+			width: 50%; /*line is 50% of the screen*/
+		}
+		/*********************/
+		/*fixing the postion of images and desc for extra small devices*/
+		.menu-item-photo {
+			margin-right: auto; /*to make it center*/
+		}
+		.menu-item-tile .menu-item-price{
+			text-align: center;
+		}
+		.menu-item-description{
+			text-align: center;
+		}
+}
+
+
+
+/*********super extra small devies*******/
+@media (max-width: 479px) {
+	/*home page for super small devices*/
+	#menu-tile, #specials-tile {
+		width: 280px;
+		margin: 0 auto 15px;
+	}
+	/*resizing the restaurant name*/
+	.navbar-brand h1{
+		padding-top: 5px;
+		font-size: 6vw;
+	}
+	/*define our own smaller smaller col for super exra small devices*/
+	/*mimic bootstrap xs-12 styling*/
+	.col-xxs-12 {
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+		float: left;
+		width: 100%;
+	}
+
+
+
+}
+
+
+
+/* collapsable nav menu glyph and text size adjustment*/
+#collapsable-nav a{
+	font-size: 1.2em;
+}
+/*overriding glyph and text different sizes*/
+#collapsable-nav a span{
+	font-size: 1em;
+	margin-right: 5px;	
+}
